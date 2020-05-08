@@ -11,8 +11,10 @@ from histogram_matching import ExactHistogramMatcher
 
 
 def histogram_matching_rgb():
-    target_img = imageio.imread('images/RGB/Luna_medium.jpg')
-    reference_img = imageio.imread('images/RGB/Luna_White_Balance_medium.jpg')
+    #target_img = imageio.imread('images/RGB/Luna_medium.jpg')
+    #reference_img = imageio.imread('images/RGB/Luna_White_Balance_medium.jpg')
+    target_img = imageio.imread('images/RGB/100_2067.JPG')
+    reference_img = imageio.imread('images/RGB/100_2029.JPG')
 
     reference_histogram = ExactHistogramMatcher.get_histogram(reference_img)
     new_target_img = ExactHistogramMatcher.match_image_to_histogram(target_img, reference_histogram)
